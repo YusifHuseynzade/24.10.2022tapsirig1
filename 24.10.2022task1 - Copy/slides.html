@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+    body {
+         background-image: url(/images/wallpapersden.com_hexagon-pattern_3840x2160.jpg);
+         background-position: center;
+         background-size: cover;
+    }
+    .container1 {
+        margin-top: 2rem !important;
+        margin-left: 18rem !important;
+        margin-right: 20rem !important;
+        }
+    .Slides {
+        display: none;
+    }
+    .img-size {
+       width: 100%;
+       height: 550px;
+       border-top-left-radius: 5%;
+       border-top-right-radius: 5%;
+    }
+    .row {
+    --bs-gutter-x: 0;
+    }
+    .img-opacity {
+    opacity: 0.6;
+    cursor: pointer;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    transition: 0.3s;
+    }
+    .active,
+    .img-opacity:hover {
+    opacity: 1;
+    }
+    .rowtext {
+    position: absolute;
+    color: #f2f2f2;
+    background-color: rgba(90, 88, 88, 0.7);
+    border-radius: 25%;
+    font-size: 14px;
+    padding: 10px 15px;
+    top: 12px;
+    left: 12px;
+    }
+    .prev,
+    .next {
+      text-decoration: none;
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 14px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 5px 5px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: 0.3s;
+    }
+    .prev:hover {
+        color: rgb(245, 219, 184);
+    }
+    .next:hover {
+        color: rgb(245, 219, 184);
+    }
+    .next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .textmiddle {
+        background: black;
+      opacity: 0.5;
+    }
+    .anime {
+        animation-name: anime;
+        animation-duration: 1s;
+    }
+    @keyframes anime {
+        from {opacity: 0.5} 
+        to {opacity: 1}
+    }
+    </style>
+</head>
+<body>
+<div class="container1 position-relative">
+    <div class="Slides anime">
+        <div class="rowtext">1 / 6</div>
+          <img src="/images/pexels-vlad-alexandru-popa-1402787.jpg" class="img-size">
+      </div>
+      <div class="Slides anime">
+        <div class="rowtext">2 / 6</div>
+          <img src="/images/pexels-h-emre-2776479 (1).jpg" class="img-size">
+      </div>
+      <div class="Slides anime">
+        <div class="rowtext">3 / 6</div>
+          <img src="/images/pexels-photo-1749303.jpeg" class="img-size">
+      </div>
+      <div class="Slides anime">
+        <div class="rowtext">4 / 6</div>
+          <img src="/images/pexels-photo-235615.jpeg" class="img-size">
+      </div>
+      <div class="Slides anime">
+        <div class="rowtext">5 / 6</div>
+          <img src="/images/pexels-photo-2387873.jpeg" class="img-size">
+      </div>
+      <div class="Slides anime">
+        <div class="rowtext">6 / 6</div>
+          <img src="/images/pexels-pixabay-33109.jpg" class="img-size">
+      </div>
+      <a class="prev" onclick="nextSlides(-1)"><i class="fa-solid fa-angle-left"></i></a>
+      <a class="next" onclick="nextSlides(1)"><i class="fa-solid fa-angle-right"></i></a>
+      <div class="row">
+        <div class="col-md-2">
+          <img class="img-opacity" src="/images/pexels-vlad-alexandru-popa-1402787.jpg" style="width:100%" onclick="currentSlide(1)">
+        </div>
+        <div class="col-md-2">
+          <img class="img-opacity" src="/images/pexels-h-emre-2776479 (1).jpg" style="width:100%" onclick="currentSlide(2)">
+        </div>
+        <div class="col-md-2">
+          <img class="img-opacity" src="/images/pexels-photo-1749303.jpeg" style="width:100%" onclick="currentSlide(3)">
+        </div>
+        <div class="col-md-2">
+          <img class="img-opacity" src="/images/pexels-photo-235615.jpeg" style="width:100%" onclick="currentSlide(4)">
+        </div>
+        <div class="col-md-2">
+          <img class="img-opacity" src="/images/pexels-photo-2387873.jpeg" style="width:100%" onclick="currentSlide(5)">
+        </div>
+        <div class="col-md-2">
+            <img class="img-opacity" src="/images/pexels-pixabay-33109.jpg" style="width:100%" onclick="currentSlide(6)">
+          </div>
+      </div>
+</div>
+    <script src="slides.js"></script>
+</body>
+</html>
